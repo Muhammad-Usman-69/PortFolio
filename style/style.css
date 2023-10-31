@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Roboto+Slab&family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00002C;
+}
+
+@media (max-width: 550px) {
+    body {
+        margin: 16px;
+        padding: auto;
+    }
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.basic-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+@media (max-width: 550px) {
+    .basic-container {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user {
+    background-color: #EEEF1C;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+}
+
+.outline {
+    /* border: 22px dashed rgb(20, 1, 105); */
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    border-radius: 50%;
+    animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+}
+
+.intro-align-container {
+    position: relative;
+}
+
+.intro-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.intro-container p {
+    font-weight: bolder;
+    font-size: 32px;
+    color: #EEEF1C;
+}
+
+#color {
+    color: rgb(1, 245, 233);
+}
