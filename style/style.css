@@ -45,19 +45,6 @@ body {
     height: 220px;
 }
 
-.outline {
-    /* border: 22px dashed rgb(20, 1, 105); */
-    width: 220px;
-    height: 220px;
-    position: absolute;
-    border-radius: 50%;
-    animation: rotate 15s infinite linear;
-}
-
-@keyframes rotate {
-    100% {transform: rotate(360deg);}
-}
-
 .intro-align-container {
     position: relative;
 }
