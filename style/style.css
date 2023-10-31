@@ -57,7 +57,7 @@ body {
     width: 100%;
 }
 
-.intro-container p {
+.intro-container {
     font-weight: bolder;
     font-size: 32px;
     color: #EEEF1C;
@@ -65,4 +65,24 @@ body {
 
 #color {
     color: rgb(1, 245, 233);
+}
+
+.intro-text {
+    display: inline;
+    position: relative;
+}
+
+.intro-text::after {
+    content: "";
+    position: absolute;
+    height: 31px;
+    width: 3px;
+    background-color: #EEEF1C;
+    bottom: 5px;
+    right: -7px;
+    animation: 1s focus infinite linear;
+}
+
+@keyframes focus {
+    50% {opacity: 50%;}
 }
