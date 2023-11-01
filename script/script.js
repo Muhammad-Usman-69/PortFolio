@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll", () => {
     let value = window.scrollY;
 
-    let container = document.querySelector("div.container");
+    let container = document.querySelector("div.container-content");
     container.style.top = value * 0.50 + "px";
 
 
@@ -68,3 +68,13 @@ window.addEventListener("scroll", () => {
         skillContainerGit.classList.remove("skill-right-set");
     };
 });
+
+function menu() {
+    let menuImage = document.querySelector(".menu-image");
+
+    if (menuImage.src.includes("images/icons8-menu.png")) {
+        menuImage.src = "images/icons8-cross.png";
+    } else {
+        menuImage.src = "images/icons8-menu.png"
+    }
+}

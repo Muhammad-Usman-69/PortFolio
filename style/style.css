@@ -17,32 +17,85 @@ body {
 
 @media (max-width: 550px) {
     body {
-        margin: 16px;
-        padding: auto;
+        margin: 0 16px;
     }
 }
 
-.container {
-    height: 100vh;
+.container-top {
+    height: 13vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+.container-top-align {
+    width: 100%;
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 550px) {
+    .container-top-align {
+        margin: 0;
+    }
+}
+
+.icons-container {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    grid-column-gap: 15px ;
+}
+
+.icons-container li {
+    list-style-type: none;
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 40px;
+}
+
+.icons-container img {
+    width: 40px;
+}
+
+
+
+.button {
+    background-color: var(--white);
+    filter: invert(100%);
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s ease;
+
+}
+
+.menu-image {
+    width: 30px;
+    height: 30px;
+}
+
+
+/*center*/
+
+.container-content {
+    height: 76vh;
     width: 100%;
     scroll-behavior: smooth;
     position: relative;
-    top: 50%;
     background-color: var(--dark-purple);
     z-index: -999;
+    overflow: hidden;
 }
 
 .basic-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
-}
-
-@media (max-width: 550px) {
-    .basic-container {
-        height: 80vh;
-        grid-template-columns: 1fr;
-    }
+    height: 100%;
 }
 
 .image-container {
@@ -69,6 +122,13 @@ body {
     border-radius: 50%;
     width: 220px;
     height: 220px;
+}
+
+@media (max-width: 650px) {
+    .basic-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
 }
 
 .intro-align-container {
@@ -112,6 +172,8 @@ body {
 @keyframes focus {
     50% {opacity: 0%;}
 }
+
+/*content*/
 
 .parallex {
     height: 100px;

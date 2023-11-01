@@ -7,10 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic PortFolio</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src='https://kit.fontawesome.com/1eeb4688e4.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-top">
+        <div class="container-top-align">
+            <div class="icons-container">
+                <li>
+                    <a href="#"><img src="images/icons8-mail.png" alt="icon"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/icons8-github.png" alt="icon"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/icons8-linkedin.png" alt="icon"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/icons8-info.png" alt="icon"></a>
+                </li>
+            </div>
+            <div class="icons-container-button">
+                <button class="button" onclick="menu()">
+                    <img class="menu-image" src="images/icons8-menu.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-content">
         <div class="basic-container">
             <div class="image-container">
                 <img src="images/transparent-background.png" alt="" id="user">
@@ -22,7 +47,6 @@
             </div>
         </div>
     </div>
-
     <div class="parallex"></div>
 
     <div class="skill-container">
@@ -72,8 +96,4 @@
 
     <script src="script/script.js"></script>
 </body>
-                        <!-- Hi!<br>
-                        My Name is 
-                        <span id="color">Muhammad Usman,</span> <br>
-                        A Front-End Web Develepor. -->
 </html>
