@@ -70,11 +70,13 @@ window.addEventListener("scroll", () => {
 });
 
 function menu() {
-    let menuImage = document.querySelector(".menu-image");
-
-    if (menuImage.src.includes("images/icons8-menu.png")) {
-        menuImage.src = "images/icons8-cross.png";
-    } else {
-        menuImage.src = "images/icons8-menu.png"
-    }
+    let menuImageOne = document.querySelector(".menu-image-one");
+    let menuImageTwo = document.querySelector(".menu-image-two");
+    // if (menuImageOne.style.opacity == 1) {
+    //     menuImageTwo.style.opacity == 1
+    // }
+    menuImageOne.classList.toggle("menu-img-op-zero");
+    menuImageTwo.classList.toggle("menu-img-op-one")
 }
+
+

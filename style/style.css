@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Roboto+Slab&family=Roboto:wght@300&display=swap');
 
 :root {
-    --yellow: #EEEF1C;
-    --cyan: #00FFF2;
+    --yellow: #ffff00;
+    --cyan: #00fff2;
     --dark-purple: #00002C;
-    --white: #fff;
+    --white: #ffffff;
     --black: #000;
+    --red: #ff0077;
+    --orange: #e44d26;
+    --blue: #264de4;
+    --green: #37ff51;
 }
 
 body {
@@ -13,6 +17,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--dark-purple);
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 @media (max-width: 550px) {
@@ -45,7 +54,7 @@ body {
 .icons-container {
     display: grid;
     grid-template-columns: 40px 40px 40px 40px;
-    grid-column-gap: 15px ;
+    grid-column-gap: 20px ;
 }
 
 .icons-container li {
@@ -53,34 +62,82 @@ body {
     background-color: var(--white);
     border-radius: 50%;
     height: 40px;
+    transition: 0.3s ease;
+    transform: translate(5px, 5px);
 }
 
 .icons-container img {
     width: 40px;
 }
 
-
-
 .button {
-    background-color: var(--white);
-    filter: invert(100%);
-    padding: 5px;
-    border-radius: 50%;
+    background-color: var(--red);
+    padding: 20px;
+    border-radius: 5px;
     border: none;
     outline: none;
     cursor: pointer;
     display: flex;
     transition: 0.3s ease;
-
+    position: relative;
+    overflow: hidden;
+    transform: translate(-10px, 5px);
 }
 
 .menu-image {
+    filter: invert(100%);
     width: 30px;
     height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
 }
 
+.menu-image-two {
+    opacity: 0;
+}
 
-/*center*/
+.menu-img-op-zero {
+    opacity: 0;
+}
+
+.menu-img-op-one {
+    opacity: 1;
+}
+
+.icon-mail:hover img, .icon-github:hover img, .icon-linkedin:hover img, .icon-info:hover img {
+    filter: invert(100%);
+}
+
+.icon-mail:hover {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom right, #3e65cf, #c71610, #f2a60c, #3b60c4, #08851b);
+    box-shadow: 0 0 20px #3e65cf, 0 0 20px #c71610, 0 0 20px #f2a60c, 0 0 20px #3b60c4, 0 0 20px #08851b;
+    transform: translate(5px, 0px);
+}
+
+.icon-github:hover {
+    background-color: transparent;
+    background-color: var(--dark-purple);
+    box-shadow: 0 0 20px var(--white), 0 0 20px var(--white), 0 0 20px var(--white);
+    transform: translate(5px, 0px);
+}
+
+.icon-linkedin:hover {
+    background-color: transparent;
+    background-color: var(--blue);
+    box-shadow: 0 0 20px var(--blue), 0 0 20px var(--blue), 0 0 20px var(--white);
+    transform: translate(5px, 0px);
+}
+
+.icon-info:hover {
+    background-color: transparent;
+    background-image: linear-gradient(to right bottom, var(--green), var(--blue), var(--red), var(--cyan));
+    box-shadow: 0 0 20px var(--green), 0 0 20px var(--blue), 0 0 20px var(--red), 0 0 20px var(--cyan);
+    transform: translate(5px, 0px);
+}
 
 .container-content {
     height: 76vh;
@@ -279,13 +336,13 @@ body {
 }
 
 .html {
-    background-color: #e44d26;
+    background-color: var(--orange);
     color: var(--white);
 }
 
 
 .css {
-    background-color: #264de4;
+    background-color: var(--blue);
     color: var(--white);
 }
 
