@@ -60,10 +60,16 @@ body::-webkit-scrollbar {
 .icons-container li {
     list-style-type: none;
     background-color: var(--white);
+    transform: translate(5px, 5px);
+    position: relative;
     border-radius: 50%;
+    top: -100px;
     height: 40px;
     transition: 0.3s ease;
-    transform: translate(5px, 5px);
+}
+
+.icon-show li {
+    top: 0px;
 }
 
 .icons-container img {
@@ -92,7 +98,7 @@ body::-webkit-scrollbar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.3s ease-in-out;
+    transition: top 0.3s ease;
 }
 
 .menu-image-two {
@@ -107,35 +113,31 @@ body::-webkit-scrollbar {
     opacity: 1;
 }
 
-.icon-mail:hover img, .icon-github:hover img, .icon-linkedin:hover img, .icon-info:hover img {
+.icon-mail:hover img,.icon-linkedin:hover img, .icon-info:hover img {
     filter: invert(100%);
 }
 
 .icon-mail:hover {
-    background-color: transparent;
     background-image: linear-gradient(to bottom right, #3e65cf, #c71610, #f2a60c, #3b60c4, #08851b);
-    box-shadow: 0 0 20px #3e65cf, 0 0 20px #c71610, 0 0 20px #f2a60c, 0 0 20px #3b60c4, 0 0 20px #08851b;
     transform: translate(5px, 0px);
+    box-shadow: 0 5px var(--orange);
 }
 
 .icon-github:hover {
-    background-color: transparent;
-    background-color: var(--dark-purple);
-    box-shadow: 0 0 20px var(--white), 0 0 20px var(--white), 0 0 20px var(--white);
+    background-color: var(--white);
+    box-shadow: 0 5px var(--white);
     transform: translate(5px, 0px);
 }
 
 .icon-linkedin:hover {
-    background-color: transparent;
     background-color: var(--blue);
-    box-shadow: 0 0 20px var(--blue), 0 0 20px var(--blue), 0 0 20px var(--white);
+    box-shadow: 0 5px var(--blue), 0 5px var(--blue);
     transform: translate(5px, 0px);
 }
 
 .icon-info:hover {
-    background-color: transparent;
     background-image: linear-gradient(to right bottom, var(--green), var(--blue), var(--red), var(--cyan));
-    box-shadow: 0 0 20px var(--green), 0 0 20px var(--blue), 0 0 20px var(--red), 0 0 20px var(--cyan);
+    box-shadow: 0 5px dodgerblue;
     transform: translate(5px, 0px);
 }
 

@@ -72,11 +72,25 @@ window.addEventListener("scroll", () => {
 function menu() {
     let menuImageOne = document.querySelector(".menu-image-one");
     let menuImageTwo = document.querySelector(".menu-image-two");
-    // if (menuImageOne.style.opacity == 1) {
-    //     menuImageTwo.style.opacity == 1
-    // }
+
     menuImageOne.classList.toggle("menu-img-op-zero");
-    menuImageTwo.classList.toggle("menu-img-op-one")
+    menuImageTwo.classList.toggle("menu-img-op-one");
+
+    let menu = document.querySelector(".icons-container");
+    let menuList = document.querySelectorAll(".icons-container li");
+
+    menu.classList.toggle("icon-show");
+
+    menuList.forEach((list, i) => {
+        list.style.transitionDelay = i * 0.1 + "s";
+    });
+    
+    setTimeout(remDelay, 3000);
+    function remDelay() {
+        menuList.forEach((list, i) => {
+            list.style.transitionDelay = i * 0 + "s";
+        }) 
+    }
 }
 
 
