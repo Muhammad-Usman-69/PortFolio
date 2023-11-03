@@ -23,11 +23,6 @@
     height: 100%;
 }
 
-.info span:not(ul li span) {
-    color: var(--yellow);
-    font-size: 16px;
-}
-
 .info h2 {
     color: var(--red);
 }
@@ -56,10 +51,6 @@
         margin: 16px 0px;
     }
 
-    .info span:not(ul li span) {
-        display: none;
-    }
-
     .parallex-two {
         display: none;
     }
@@ -74,9 +65,5 @@
 @media (min-width: 1200px) {
     .info {
         font-size: 28px;
-    }
-
-    .info span:not(ul li span) {
-        font-size: 20px;
     }
 }
