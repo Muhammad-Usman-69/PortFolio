@@ -1,9 +1,9 @@
 window.addEventListener("load", () => {
     let textContainer = document.querySelector(".intro-text")
-    let text = `Hi! My Name is   A Front-End Web Develepor.`;
+    let text = `Hey! I'm   A Front-End Web Develepor.`;
     let index = 0;
-    let lineBreakIndex = [3, 16];
-    let spanIndex = [15];
+    let lineBreakIndex = [4, 10];
+    let spanIndex = [9];
 
     function loop() {
         if (index <= text.length) {

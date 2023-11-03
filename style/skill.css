@@ -1,0 +1,150 @@
+.parallex {
+    height: 100px;
+    margin-bottom: 0;
+    background-image: linear-gradient(transparent, var(--dark-purple));
+}
+
+.skill-container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--dark-purple);
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.skill-heading {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--yellow);
+    height: 20vh;
+    margin: 0;
+}
+
+.skill-name {
+    position: relative;
+}
+
+.vertical-line {
+    height: 0vh;
+    width: 2px;
+    background-color: var(--yellow);
+    position: absolute;
+    left: 50%;
+    transition: 1s linear;
+}
+
+.skill-name img {
+    width: 60px;
+    height: auto;
+}
+
+.skill-align-right {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    position: relative;
+    left: 10%;
+}
+
+.skill-align-container {
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.skill-align-left {
+    position: relative;
+    right: 10%;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.skill-left-set {
+    right: 0%;
+    opacity: 1;
+}
+
+.skill-right-set {
+    left: 0%;
+    opacity: 1;
+}
+
+.html, .css, .js, .git {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 100px;
+    font-size: 48px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.html::after, .css::after, .js::after, .git::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background-color: var(--yellow);
+}
+
+.html::after, .js::after {
+    right: 0;
+}
+
+.css::after, .git::after {
+    left: 0;
+}
+
+.html {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+
+.css {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.js {
+    background-color: #fdd83c;
+    color: var(--black);
+}
+
+.git {
+    background-color: var(--white);
+}
+
+@media (max-width: 550px) {
+    .html, .css, .js, .git {
+        width: 90%;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .html, .js {
+        margin-right: 10%;
+    }
+
+    .css, .git {
+        margin-left: 10%;
+    }
+    
+    .skill-name img {
+        width: 30px;
+    }
+    
+    .html::after, .css::after, .js::after, .git::after {
+        width: 10%;
+    }
+
+    .skill-heading {
+        font-size: 48px;
+    }
+}
