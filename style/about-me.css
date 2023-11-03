@@ -1,0 +1,82 @@
+.parallex-two {
+    height: 70px;
+    background-image: linear-gradient(to top, var(--light-purple), transparent);    
+}
+
+.info {
+    background-color: var(--light-purple);
+    color: var(--white);
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 22px;
+}
+
+.image {
+    height: 80vh;
+    display: flex;
+    justify-content: right;
+}
+
+.image img {
+    width: auto;
+    height: 100%;
+}
+
+.info span:not(ul li span) {
+    color: var(--yellow);
+    font-size: 16px;
+}
+
+.info h2 {
+    color: var(--red);
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+}
+
+.info ul li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    word-break: break-all;
+    padding: 0;
+}
+
+.info ul li span:nth-child(2) {
+    opacity: 0.8;
+}
+
+@media (max-width: 750px) {
+    .info {
+        grid-template-columns: 1fr;
+        margin: 16px 0px;
+    }
+
+    .info span:not(ul li span) {
+        display: none;
+    }
+
+    .parallex-two {
+        display: none;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .info {
+        font-size: 28px;
+    }
+
+    .info span:not(ul li span) {
+        font-size: 20px;
+    }
+}

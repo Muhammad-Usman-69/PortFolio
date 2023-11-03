@@ -1,0 +1,111 @@
+
+.container-top {
+    height: 13vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+.container-top-align {
+    width: 100%;
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 550px) {
+    .container-top-align {
+        margin: 0;
+    }
+}
+
+.icons-container {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    grid-column-gap: 20px ;
+}
+
+.icons-container li {
+    list-style-type: none;
+    background-color: var(--white);
+    transform: translate(5px, 5px);
+    position: relative;
+    border-radius: 50%;
+    top: -100px;
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+.icon-show li {
+    top: 0px;
+}
+
+.icons-container img {
+    width: 40px;
+}
+
+.button {
+    background-color: var(--red);
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transform: translate(-10px, 5px);
+}
+
+.menu-image {
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease;
+}
+
+.menu-image-two {
+    opacity: 0;
+}
+
+.menu-img-op-zero {
+    opacity: 0;
+}
+
+.menu-img-op-one {
+    opacity: 1;
+}
+
+.icon-mail:hover img,.icon-linkedin:hover img, .icon-info:hover img {
+    filter: invert(100%);
+}
+
+.icon-mail:hover {
+    background-image: linear-gradient(to bottom right, #3e65cf, #c71610, #f2a60c, #3b60c4, #08851b);
+    transform: translate(5px, 0px);
+    box-shadow: 0 5px var(--orange);
+}
+
+.icon-github:hover {
+    background-color: var(--white);
+    box-shadow: 0 5px var(--white);
+    transform: translate(5px, 0px);
+}
+
+.icon-linkedin:hover {
+    background-color: var(--blue);
+    box-shadow: 0 5px var(--blue), 0 5px var(--blue);
+    transform: translate(5px, 0px);
+}
+
+.icon-info:hover {
+    background-image: linear-gradient(to right bottom, var(--green), var(--blue), var(--red), var(--cyan));
+    box-shadow: 0 5px dodgerblue;
+    transform: translate(5px, 0px);
+}
