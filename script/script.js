@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+    
     let imageCont = document.querySelector(".image-container")
     imageCont.classList.toggle("image-container-load");
 
