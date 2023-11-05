@@ -56,18 +56,14 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: image 1s 1 ease-in-out;
+    left: -100%;
+    transform: rotate(-360deg);
+    transition: 1s ease-in-out;
 }
 
-@keyframes image {
-    0% {
-        transform: rotate(-360deg);
-        left: -100%;
-    }
-    100% {
-        transform: rotate(0deg);
-        left: 0%;
-    }
+.image-container-load {
+    left: 0%;
+    transform: rotate(0deg);
 }
 
 #user {

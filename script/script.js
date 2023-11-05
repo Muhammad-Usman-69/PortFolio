@@ -1,4 +1,7 @@
 window.addEventListener("load", () => {
+    let imageCont = document.querySelector(".image-container")
+    imageCont.classList.toggle("image-container-load");
+
     let textContainer = document.querySelector(".intro-text")
     let text = `Hey! I'm   A Front-End Web Develepor.`;
     let index = 0;
