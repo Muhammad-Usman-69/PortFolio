@@ -5,7 +5,7 @@
 }
 
 .skill-container {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     background-color: var(--dark-purple);
     position: relative;
@@ -74,7 +74,7 @@
     opacity: 1;
 }
 
-.html, .css, .js, .git {
+.html, .css, .js, .git, .tailwind {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,7 +85,7 @@
     border-radius: 5px;
 }
 
-.html::after, .css::after, .js::after, .git::after {
+.html::after, .css::after, .js::after, .git::after, .tailwind::after {
     content: "";
     position: absolute;
     width: 20%;
@@ -93,7 +93,7 @@
     background-color: var(--yellow);
 }
 
-.html::after, .js::after {
+.html::after, .js::after, .tailwind::after {
     right: 0;
 }
 
@@ -121,8 +121,13 @@
     background-color: var(--white);
 }
 
+.tailwind {
+    background-color: var(--white);
+    color:  #14cebb;
+}
+
 @media (max-width: 550px) {
-    .html, .css, .js, .git {
+    .html, .css, .js, .git, .tailwind {
         width: 90%;
         height: 60px;
         font-size: 24px;

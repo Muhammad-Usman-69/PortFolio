@@ -71,6 +71,14 @@ window.addEventListener("scroll", () => {
     } else {
         skillContainerGit.classList.remove("skill-right-set");
     };
+
+    let skillContainerTail = document.querySelector(".skill-tailwind");
+    if (value > 1000) {
+        skillContainerTail.classList.add("skill-left-set");
+        vertLine.style.height = 100 + 'vh';
+    } else {
+        skillContainerTail.classList.remove("skill-left-set");
+    };
 });
 
 function menu() {

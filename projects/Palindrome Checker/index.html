@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Muhammad Usman">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palindrome Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            background-color: #343a40;
+        }
+
+        .container {
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container input {
+            margin: 5px 0;
+        }
+
+        .container button {
+            width: 100%;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Palindrome Checker</h2>
+        <input type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <button type="button" class="btn btn-danger">Check</button>
+        <input type="text" class="form-control output" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        let btn = document.querySelector(".btn");
+        btn.addEventListener("click", () => {
+            let inp = document.querySelector(".input");
+            let out = document.querySelector(".output");
+
+            str = inp.value;
+
+            const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+            const reversedStr = cleanStr.split('').reverse().join('');
+
+            let strLen = cleanStr.length;
+            let strLenHalf = Math.round(strLen / 2);
+
+            let strBef = cleanStr.substring(0, strLenHalf);
+            let strAft = reversedStr.substring(0, strLenHalf);
+
+
+            if (strBef === strAft) {
+                out.value = " This is a palindrome "
+            } else {
+                out.value = " This is not a palindrome "
+            }
+        });
+    </script>
+</body>
+
+</html>

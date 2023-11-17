@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Muhammad Usman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Slab&family=Roboto:wght@300&family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <div class="display">
+                <input type="text" id="screen" />
+            </div>
+            <div class="button">
+                <input type="button" id="input" value="sin" onclick="sin()" class="additionalCss" />
+                <input type="button" id="input" value="cos" onclick="cos()" class="additionalCss" />
+                <input type="button" id="input" value="tan" onclick="tan()" class="additionalCss" />
+                <input type="button" id="input" value="(" class="digit additionalCss"/>
+                <input type="button" id="input" value=")" class="digit additionalCss"/>
+                <input type="button" id="input" value="7" class="digit" />
+                <input type="button" id="input" value="8" class="digit" />
+                <input type="button" id="input" value="9" class="digit" />
+                <input type="button" id="input" value="DL" onclick="del()" class="removeCss" />
+                <input type="button" id="input" value="AC" onclick="clr()" class="removeCss" />
+                <input type="button" id="input" value="4" class="digit" />
+                <input type="button" id="input" value="5" class="digit" />
+                <input type="button" id="input" value="6" class="digit" />
+                <input type="button" id="input" value="*" class="operation operatorCss" />
+                <input type="button" id="input" value="/" class="operation operatorCss" />
+                <input type="button" id="input" value="1" class="digit" />
+                <input type="button" id="input" value="2" class="digit" />
+                <input type="button" id="input" value="3" class="digit" />
+                <input type="button" id="input" value="&plus;" class="operation operatorCss" />
+                <input type="button" id="input" value="&minus;" class="operation operatorCss" />
+                <input type="button" id="input" value="0" class="digit" />
+                <input type="button" id="input" value="." class="digit additionalCss"/>
+                <input type="button" id="input" value="√x" onclick="sqrt()" class="additionalCss" />
+                <input type="button" id="input" value="x²" onclick="sq()" class="additionalCss" />
+                <input type="button" id="input" value="=" onclick="evl()" class="operatorCss" />
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
