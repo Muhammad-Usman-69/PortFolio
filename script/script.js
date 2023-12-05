@@ -79,6 +79,14 @@ window.addEventListener("scroll", () => {
     } else {
         skillContainerTail.classList.remove("skill-left-set");
     };
+
+    let skillContainerPHP = document.querySelector(".skill-php");
+    if (value > 1100) {
+        skillContainerPHP.classList.add("skill-right-set");
+        vertLine.style.height = 120 + 'vh';
+    } else {
+        skillContainerPHP.classList.remove("skill-right-set");
+    };
 });
 
 function menu() {

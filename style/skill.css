@@ -5,7 +5,7 @@
 }
 
 .skill-container {
-    height: 120vh;
+    height: 140vh;
     width: 100%;
     background-color: var(--dark-purple);
     position: relative;
@@ -74,7 +74,7 @@
     opacity: 1;
 }
 
-.html, .css, .js, .git, .tailwind {
+.html, .css, .js, .git, .tailwind, .php {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,7 +85,7 @@
     border-radius: 5px;
 }
 
-.html::after, .css::after, .js::after, .git::after, .tailwind::after {
+.html::after, .css::after, .js::after, .git::after, .tailwind::after, .php::after {
     content: "";
     position: absolute;
     width: 20%;
@@ -97,7 +97,7 @@
     right: 0;
 }
 
-.css::after, .git::after {
+.css::after, .git::after, .php::after {
     left: 0;
 }
 
@@ -126,18 +126,23 @@
     color:  #14cebb;
 }
 
+.php {
+    background-color: #777bb3;
+    color: var(--black);
+}
+
 @media (max-width: 550px) {
-    .html, .css, .js, .git, .tailwind {
+    .html, .css, .js, .git, .tailwind, .php {
         width: 90%;
         height: 60px;
         font-size: 24px;
     }
 
-    .html, .js {
+    .html, .js, .tailwind {
         margin-right: 10%;
     }
 
-    .css, .git {
+    .css, .git, .php {
         margin-left: 10%;
     }
     
@@ -145,7 +150,7 @@
         width: 30px;
     }
     
-    .html::after, .css::after, .js::after, .git::after {
+    .html::after, .css::after, .js::after, .git::after, .tailwind::after, .php::after {
         width: 10%;
     }
 
